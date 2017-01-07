@@ -22,6 +22,19 @@ A lényeges elemel felkerültek, de hiányos és nem minden érthető.
 - A létrehozott blokkoknak jó lett volna létrehozni egy külön packaget.
 - Nem látok egy interfészt sem kibontva (metódusok) és signal-t sem hoztatok létre.
 
+3. feladat
+A feladat szövege szerint csak az egyik szenzor volt redundáns, nem mindhárom. Egyébként mindegyik feladatot jól oldottátok meg.
+
+4. feladat
+a) RequestinRoutes: nem értem a jobb oldalt lévő extra control flowt.
+Modifying lines diagramot nagyon furán rendeztétek el, továbbá nem is jó a control flow: Ha az elején a NO irányba megy a control, akkor a joinnál várakozni fog a végtelenségig a folyamat, mert nincs a másik bekötött control flown nem jön token soha. A Validate line lefutásból két control flow indul, ami helyett fork-ot kellene használni (és ahhoz tartozó joint).
+Validate lines: a "send signal" események soha nem fognak lefutni, mert nem kapnak control tokent. A data flow csak akkor horoz magában control flow-t, ha van bemeneti control flow és a kimenetén nincs más csak egy dataflow.
+b) UML-es diagramot hoztatok létre SysML-es helyett, érdemes figyelni az apróságokra is. (c)-nél ugyanez)
+Smart train controller: Van egy nagy állapot, de nincs hozzá kezdő és vég állapot. De a részes sem teljesen specifikáltak, mi történik a "routing" után? A diamond elmek teljesen fölöslegesek és nehezítik a megértést így.
+Másik állapotgépben hasonló hibák vannak.
+c) Elég minimálisak lettek, ennél azért bonyolultabbakat is ki lehetet volna találni. A "ProcessingRequest"-nél például hol van a request? Mi történik, ha Scheduling Manager megkapja a szükséges információt a Smart Train Controllertől?
+
+
 5. feladat
 Az OpticCabel-t egy kicsit túlzásnak érzem.
 A Cloud Server Park, miért a routerbe van bekötve és miért nem a Load Balancerbe? A Load Balancer osztja szét a terhelést a szerverek között. Ez így nem az igazi.
