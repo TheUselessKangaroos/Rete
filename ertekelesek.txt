@@ -1,0 +1,15 @@
+5. feladat
+Az OpticCabel-t egy kicsit túlzásnak érzem.
+A Cloud Server Park, miért a routerbe van bekötve és miért nem a Load Balancerbe? A Load Balancer osztja szét a terhelést a szerverek között. Ez így nem az igazi.
+Az allokációt nem értem: a zone aktuátor például a cloudServerParkra van allokálva. Oda a backend feladatokat kellett volna allokálni: Transportation és ami alatta van.
+A dokumentáció eléggé minimális.
+
+6. feladat
+6.1.: A követelmények analízise kellõen alapos, a készített mátrix jól összegzi a követelményeket. Azt viszont nem vizsgáltátok, hogy az adott követelmények ellentmondásmentesek-e.
+6.2.: Az elsõ teszteset nem kapcsoltátok követelményhez, pedig egy elég általános dolgot tesztel (RoutePlanner ad kimenetet). 
+Nektek most összessen 1 konfigurációtok van, de általánosan a teszteseteknél érdemes ID szerint hivatkozni, hogy egyértelmû legyen. Emellett itt konkrétan kijelölhetõek lettek volna az egyes esetekben az elvárt útvonal/útvonalak szegmensei.
+6.3.: Rajzoltatok szekvencia diagramokat, valamint csatoltatok hozzá értelmezést is a dokumentációba, ami jelen esetben szükséges a diagramok értelmezéséhez. Problémák:
+* A szekvencia diagramokon nem vettétek figyelembe az egyes interfészeket (adható jelzéseket), és valami saját üzeneteket küldenek a komponensek egymásnak
+* Teljesen hiányoznak a tesztkörnyezet leíró modellek és a teszt adattartományok
+
+A feladatot részben sikeresen megoldottátok, kár, hogy az utolsó feladatra (feltehetõen) nem maradt elég idõtök.
