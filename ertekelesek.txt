@@ -1,15 +1,39 @@
+1. feladat
+Az irány jó, de vannak hiányosságok és a dokumentáció erősen minimalisztikus. 
+- A dokumentációban jó lett volna legalább felsorolás szinten beletenni az új követelményeket, használati eseteket, mert így nem tudjuk mit nézzünk a modelletekben.
+- A 2.3 és 2.4 és fejezetek nem érthetőek jelenlegi formájukban.
+- A Passengert a Stakeholders diagramra is fel lehetett volna venni.
+- F4.2 és F4.3 lehetett volna külön diagramon.
+- P1.1 és F4.3.1.1 között lehetne valamilyen trace összeköttetés.
+- Az ajtó záráshoz köthető Safety követelmények jók lettek!
+- U1.4.1 inkább funkcionális követelmény.
+- A Create route és Set stations használati esetek, nem a Control infrastructure esethez tartoznak szerintem, hanem különálló esetek.
+-- Az se világos miért ez a kettő van. A Set stations nem a Create route része? Módosítani, törölni nem lehet?
+- Az F4.3.2.1 követelmény jegyekről beszél, ami jó, de akkor miért nem modelleztétek, hogy lehet jegyeket venni, esetleg azokat ellenőrizni is kell?
+
+2. feladat
+A lényeges elemel felkerültek, de hiányos és nem minden érthető.
+- Remélem ti is érzitek, hogy a dokumentáció nem tölti be a funkcióját: fel kellene sorolni, hogy mit-miért tettetek a modelbe.
+- Furcsa, hogy a Main modules BDD-n a containment élekből referencia élek lettek.
+- A Scheduling system rendszert egy IBD-n be lehetett volna kötni a meglévő rendszerbe.
+- A Scheduling system IBD-jében vannak inkompatibilis portok. Nyugodtan beköthettétek volna a két belső portot arra az egy külső portra, nem kell nested port.
+- Ugyanezen IBD-n a schedule manager kiajánl egy ClientPort nevű portot. Ez egy kiajnálás, nem konjugált portnak kellene lennie.
+- Smart train controllernek van két portja, ami nincs belső elemhez kötve. Ennek lehet hogy van értelme, de dokumentáció nélkül ezt nem tudom értelmezni.
+- A létrehozott blokkoknak jó lett volna létrehozni egy külön packaget.
+- Nem látok egy interfészt sem kibontva (metódusok) és signal-t sem hoztatok létre.
+
 5. feladat
-Az OpticCabel-t egy kicsit t�lz�snak �rzem.
-A Cloud Server Park, mi�rt a routerbe van bek�tve �s mi�rt nem a Load Balancerbe? A Load Balancer osztja sz�t a terhel�st a szerverek k�z�tt. Ez �gy nem az igazi.
-Az allok�ci�t nem �rtem: a zone aktu�tor p�ld�ul a cloudServerParkra van allok�lva. Oda a backend feladatokat kellett volna allok�lni: Transportation �s ami alatta van.
-A dokument�ci� el�gg� minim�lis.
+Az OpticCabel-t egy kicsit túlzásnak érzem.
+A Cloud Server Park, miért a routerbe van bekötve és miért nem a Load Balancerbe? A Load Balancer osztja szét a terhelést a szerverek között. Ez így nem az igazi.
+Az allokációt nem értem: a zone aktuátor például a cloudServerParkra van allokálva. Oda a backend feladatokat kellett volna allokálni: Transportation és ami alatta van.
+A dokumentáció eléggé minimális.
 
 6. feladat
-6.1.: A k�vetelm�nyek anal�zise kell�en alapos, a k�sz�tett m�trix j�l �sszegzi a k�vetelm�nyeket. Azt viszont nem vizsg�lt�tok, hogy az adott k�vetelm�nyek ellentmond�smentesek-e.
-6.2.: Az els� teszteset nem kapcsolt�tok k�vetelm�nyhez, pedig egy el�g �ltal�nos dolgot tesztel (RoutePlanner ad kimenetet). 
-Nektek most �sszessen 1 konfigur�ci�tok van, de �ltal�nosan a tesztesetekn�l �rdemes ID szerint hivatkozni, hogy egy�rtelm� legyen. Emellett itt konkr�tan kijel�lhet�ek lettek volna az egyes esetekben az elv�rt �tvonal/�tvonalak szegmensei.
-6.3.: Rajzoltatok szekvencia diagramokat, valamint csatoltatok hozz� �rtelmez�st is a dokument�ci�ba, ami jelen esetben sz�ks�ges a diagramok �rtelmez�s�hez. Probl�m�k:
-* A szekvencia diagramokon nem vett�tek figyelembe az egyes interf�szeket (adhat� jelz�seket), �s valami saj�t �zeneteket k�ldenek a komponensek egym�snak
-* Teljesen hi�nyoznak a tesztk�rnyezet le�r� modellek �s a teszt adattartom�nyok
+6.1.: A követelmények analízise kellően alapos, a készített mátrix jól összegzi a követelményeket. Azt viszont nem vizsgáltátok, hogy az adott követelmények ellentmondásmentesek-e.
+6.2.: Az első teszteset nem kapcsoltátok követelményhez, pedig egy elég általános dolgot tesztel (RoutePlanner ad kimenetet). 
+Nektek most összessen 1 konfigurációtok van, de általánosan a teszteseteknél érdemes ID szerint hivatkozni, hogy egyértelmű legyen. Emellett itt konkrétan kijelölhetőek lettek volna az egyes esetekben az elvárt útvonal/útvonalak szegmensei.
+6.3.: Rajzoltatok szekvencia diagramokat, valamint csatoltatok hozzá értelmezést is a dokumentációba, ami jelen esetben szükséges a diagramok értelmezéséhez. Problémák:
+* A szekvencia diagramokon nem vettétek figyelembe az egyes interfészeket (adható jelzéseket), és valami saját üzeneteket küldenek a komponensek egymásnak
+* Teljesen hiányoznak a tesztkörnyezet leíró modellek és a teszt adattartományok
 
-A feladatot r�szben sikeresen megoldott�tok, k�r, hogy az utols� feladatra (feltehet�en) nem maradt el�g id�t�k.
+A feladatot részben sikeresen megoldottátok, kár, hogy az utolsó feladatra (feltehetően) nem maradt elég időtök.
